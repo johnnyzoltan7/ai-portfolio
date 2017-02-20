@@ -16,6 +16,7 @@ body {
     margin-left: -250px;
     overflow-y: auto;
     background: #000000;
+    padding-right: 60px;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -26,7 +27,9 @@ body {
 	position: absolute;
 	top: 0;
 	left: 20;
-	max-height, max-width: 60px; 
+	max-height: 60px; 
+	max-width: 60px;
+	height: 60px; 
 }
 
 .footnote {
