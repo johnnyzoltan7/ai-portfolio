@@ -1,0 +1,77 @@
+body {
+	background-color: #000000;
+	background-image: url(../img/bkgrnd.jpg); 
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed; 
+}
+
+.hal-bar {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.hal {
+	position: absolute;
+	top: 0;
+	left: 20;
+	max-height, max-width: 60px; 
+}
+
+.footnote {
+    position: fixed;
+    bottom: 0px;
+}
+.transout, .footnote {
+	background-color: transparent;
+	border:transparent;
+}
+
+.nav-but{
+	background-color: transparent;
+}
+
+.nav-but-ai {
+	color: #fff;
+	background: rgba(220, 21, 18, 0.61);
+	border-radius: 30px;
+}
+
+/*orb styles*/
+.orb, .orbR,.orbG,.orbY,.orbO {
+	max-width: 60px;
+}
+.orbR {
+	background-repeat: no-repeat;
+	background-image: url(../img/orbR.png);
+}
+.orbG {
+	background-repeat: no-repeat;
+	background-image: url(../img/orbG.png);
+}
+.orbY {
+	background-repeat: no-repeat;
+	background-image: url(../img/orbY.png);
+}
+.orbO {
+	background-repeat: no-repeat;
+	background-image: url(../img/orbO.png);
+}
+.first-row, .second-row, .third-row {
+	margin-top: 100px
+
+}
+.orb-pressed {
+	align-content: center;
+}

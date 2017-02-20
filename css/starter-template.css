@@ -1,0 +1,99 @@
+/* HTML element overrides ======================*/
+body {
+	padding-top: 50px;
+}
+
+.end-li { 
+	list-style-type: none;
+	list-style-position:inside;
+	margin:0;
+	padding:0; 
+}
+/* Custom classes ==============================*/
+.starter-template {
+	padding: 40px 15px;
+	text-align: center;
+}
+
+.starter-footer {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	color: #fff;
+	text-align: center;
+	background-color: #222; 
+}
+.footer-breadcrumbs {
+	background-color: #222;
+	text-align: auto;
+}
+
+.social-media-bar {
+	display: inline-block;
+	max-width: 100%;
+}
+
+.social-media-icon {
+	max-height: 65px;
+	max-width: 65px;
+	padding: 4px;
+	line-height: 1.42857143;
+	background-color: transparent;
+	border: none;
+	border-radius: 4px;
+	-webkit-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.name-header {
+	text-align: right;
+	font-size: 56px;
+}
+
+.section-header {
+	text-align: left;
+	color: rgb(200, 99, 88);
+}
+
+.text-tag {
+	text-align: left;
+	font-size: 16px
+}
+
+.carousel-qoutes {
+	padding-bottom: 0px;
+	padding-top: 100px;
+	top:10px;
+
+}
+
+@media screen and (max-width: 650px){
+	.qoutes-small {
+		padding-top: 20px;
+	}
+}
+
+.top-indicators {
+  position: absolute;
+  top: 10px;
+  bottom: 0px
+}
+/* miscellaneous */
+.asu-icon {
+	float: left;
+	max-width: 80px;
+	max-height: 20px;
+	padding-right: 10px
+}
+
+.footpad {
+	padding: 30px;
+}
+
+@media screen and (max-width: 650px) {
+	.header-small {
+		font-size: 16px;
+	}
+}
+

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="./img/pot.jpg">
+
+  <title>Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link href="./bootstrap/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="./css/starter-template.css" rel="stylesheet">
+  <link href="./css/simple-sidebar.css" rel="stylesheet">
+
+  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+  <script src="./bootstrap/assets/js/ie-emulation-modes-warning.js"></script>
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+    </head>
+
+    <body>
+      <!-- NAVBAR ========================================================= -->
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Portfolio</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="#">Notes</a></li>
+            <li><a href="artifice.html">A.I.</a></li>
+            <li></li>
+          </ul>
+          <a href="#menu-toggle" class="btn btn-success toggle-menu" id="menu-toggle">Outline</a>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav><!-- /.navbar -->
+
+    <!-- NOTES ============================================================ -->
+    <div class="container">
+      <div id="wrapper">
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+          <ul class="sidebar-nav">
+            <li class="sidebar-brand" style="text-indent: 0px;">
+              <a href="#">
+                <img src="./img/mrrobot.png">
+              </a>
+            </li>
+            <div class="sidebar-divider"></div>
+            <li>
+              <!-- Split button -->
+              <div class="btn-group">
+                <button type="button" class="btn btn-info">Chapter 4</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#Multicore">Multicore Programming</a></li>
+                  <li><a href="#Plibrarys">Thread Libraries</a></li>
+                  <li><a href="#pools">Thread Pools</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <!-- Split button -->
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-info">Chapter 2</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown2</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Section 1</a></li>
+                  <li><a href="#">Section 2</a></li>
+                  <li><a href="#">Section 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <!-- Split button -->
+              <div class="btn-group dropup">
+                <button type="button" class="btn btn-info">Chapter 3</button>
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown3</span>
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Section 1</a></li>
+                  <li><a href="#">Section 2</a></li>
+                  <li><a href="#">Section 3</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-10">
+                <section id="thread-chapter">
+                  <h1 id="" class="chapter-header">Chapter 4 </h1>
+                  <h1> Threading</h1>
+                  <ul>
+                    <li>A thread is a basic unit of CPU utilization</li>
+                    <li>Attributes</li>
+                    <li class="in-dent">Thread ID</li>
+                    <li class="in-dent">PC</li>
+                    <li class="in-dent">Register set</li>
+                    <li class="in-dent">Stack</li>
+                    <li>Shares with other threads belonging to the same process</li>
+                    <li class="in-dent">Code section</li>
+                    <li class="in-dent">Data section</li>
+                    <li class="in-dent">Other OS resources</li>
+                  </ul>
+                  <h1>Motivation</h1>
+                  <ul>
+                    <li>Most modern appliactions are multithreaded</li>
+                    <li>threads run within application</li>
+                    <li>Multiple tasks with the application can be implemented by separate threads</li>
+                    <li class="in-dent">Update display</li>
+                    <li class="in-dent">Fetch data</li>
+                    <li class="in-dent">Spell checking</li>
+                    <li class="in-dent">Answer a network request</li>
+                    <li>Can simplify code, increase efficiency</li>
+                    <li>Kernels are generally multithreaded</li>
+                  </ul>
+                  <h1>Single and Multithreaded Process Benefits</h1>
+                  <ul>
+                    <li>Responsiveness</li>
+                    <li class="in-dent">may allow continued execution if part of process is blocked, especially important for user interfaces</li>
+                    <li>Resource Sharing</li>
+                    <li class="in-dent">threads share resources of process, easier than shared memory or message passing</li>
+                    <li>Economy</li>
+                    <li class="in-dent">Cheaper than process creation, thread switching lower overhead than context switching</li>
+                    <li>Scalability</li>
+                    <li id="Multicore" class="in-dent">process can take advantage of multiprocessor architectures</li>
+                  </ul>
+                  <h1 >Multicore Programming</h1>
+                  <ul>
+                    <li><code>Multicore</code> or <code>multiprocessor</code> systems put more pressure on programmers</li>
+                    <li>Challenges include:</li>
+                    <li class="in-dent">dividing activities</li>
+                    <li class="in-dent">balance</li>
+                    <li class="in-dent">data splitting</li>
+                    <li class="in-dent">data dependency</li>
+                    <li class="in-dent">testing and debugging</li>
+                    <li><code>Parallelism</code> implies a system can perform more than one task simultaneously</li>
+                    <li><code>Concurrency</code> supports more than one task making progress</li>
+                    <li class="in-dent">single processor / core, scheduler providing concurrency</li>
+                    <li>Types of parallelism</li>
+                    <li class="in-dent"><code>Data parallelism</code> - distributes subsets of the same data acreoss multiple cores, same operation on each</li>
+                    <li class="in-dent"><code>task parallelism</code> - distributing threads across cores, each thread performing unique operation</li>
+                    <li>as # of threads grow, so does architectural support for threading</li>
+                    <li class="in-dent">CPUs have cores as well as <code>hardware threads</code></li>
+                    <li class="in-dent">Consider Oracle SPARC T4 with 8 cores, and 8 hardware threads per core</li>
+                  </ul>
+                  <h1>Concurrency v. Parallelism</h1>
+                  <div class="container"><img style="max-width: 100%" src="./img/S1.png"></div>
+                  <h1>User Threads and Kernel Threads</h1>
+                  <ul>
+                    <li><code>User threads</code> - management done by user-level threads library</li>
+                    <li>Three primary thread libraries:</li>
+                    <li class="in-dent">POSIX <code>Pthreads</code></li>
+                    <li class="in-dent">Windows threads</li>
+                    <li class="in-dent">Java threads</li>
+                    <li><code>Kernel threads</code> - supported by the kernel</li>
+                    <li>Examples - virtually all gernal pupose operating systems, including:</li>
+                    <li class="in-dent">Windows</li>
+                    <li class="in-dent">Solaris</li>
+                    <li class="in-dent">Linux</li>
+                    <li class="in-dent">Tru64 UNIX</li>
+                    <li class="in-dent">Mac OS X</li>
+                  </ul>
+                  <h1>Multithreading Models</h1>
+                  <ul>
+                    <li>Many-to-one</li>
+                    <li>One-to-one</li>
+                    <li>Many-to-many</li>
+                  </ul>
+                  <h1>Many-to-one</h1>
+                  <ul>
+                    <li>Many user-level threads mapped to single kernel thread</li>
+                    <li>one thread blocking causes al to block</li>
+                    <li>multiple threads may not run in parallel on multicore system becaue only one may be in kernel at a time</li>
+                    <li>few systems currently use this model</li>
+                    <li>Examples</li>
+                    <li class="in-dent">Solaris Grean Threads</li>
+                    <li class="in-dent">GNU Portable Threads</li>
+                  </ul>
+                  <h1>One-to-One</h1>
+                  <ul>
+                    <li>Each user-level thread maps to kernel thread</li>
+                    <li>Creating a user-level thread creates a kernel thread</li>
+                    <li>More concurrency than many-to-one</li>
+                    <li>number of threads per process sometimes restriced due to overhead</li>
+                    <li>Examples:</li>
+                    <li class="in-dent">Windows</li>
+                    <li class="in-dent">Linux</li>
+                    <li class="in-dent">Solaris 9 and later</li>
+                  </ul>
+                  <h1>Many-to-one</h1>
+                  <ul>
+                    <li>allows many user level threads to be mapped to many kernel threads</li>
+                    <li>allows the OS to create a sufficient # of kernel threads</li>
+                    <li>solaris prior to v9</li>
+                    <li>windows with the ThreadFiber package</li>
+                  </ul>
+                  <h1>Two-level model</h1>
+                  <ul>
+                    <li>similar to M:M, but allows a user thread to be bound to a kernel thread</li>
+                    <li class="in-dent">IRIX</li>
+                    <li class="in-dent">HP-UX</li>
+                    <li class="in-dent">Tru64 UNIX</li>
+                    <li id="Plibrarys" class="in-dent">Solaris 8 and earlier</li>
+                  </ul>
+                  <h1 >Thread Libraries</h1>
+                  <ul>
+                    <li><code>Thread library</code> provides programmer w/ API for creating/managing threds</li>
+                    <li>2 primary ways of implementation</li>
+                    <li class="in-dent">library entirely in user space</li>
+                    <li class="in-dent">kernel-level library supported by OS</li>
+                  </ul>
+                  <h1>Pthreads</h1>
+                  <ul>
+                    <li>may be provided either as user or kernel level</li>
+                    <li>a POSIX standard API for thread creation/synchonization</li>
+                    <li><code>Specification</code> is not <code>implementation</code></li>
+                    <li>API specifies behavior of the thread library, implementation is up to development of the library</li>
+                    <li>common in UNIX OSs</li>
+                  </ul>
+                  <h1>Java threads</h1>
+                  <ul>
+                    <li>java threads are managed by the JVM</li>
+                    <li>typically implemented using the threads model provided by underlying OS</li>
+                    <li>java threads may be created defining a class that extends thread class</li>
+                    <li class="in-dent">implent the Runnable interface; must define run()</li>
+                  </ul>
+                  <h1>Implicit threading</h1>
+                  <ul>
+                    <li>program correctness more difficult w/ explicit threads</li>
+                    <li>creation and management of theads done bu compilers and run-time libraries rather than programmers</li>
+                    <li>thre methods explored</li>
+                    <li class="in-dent">thread pools</li>
+                    <li class="in-dent">OpenMP</li>
+                    <li class="in-dent">Grand Central Dispatch</li>
+                    <li id="pools">other methods include microsoft threading building blocks (TBB) and java.util.concurrent package</li>
+                  </ul>
+                  <h1 >Thread Pools</h1>
+                  <ul>
+                    <li>create a # of threads in a pool where they await work</li>
+                    <li>advantages:</li>
+                    <li class="in-dent">slight increase in speed when handling service as opposed to thread creation on demand</li>
+                    <li class="in-dent">allow the # of threads in application(s) to be bound to the pool size</li>
+                    <li class="in-dent">separating task to be performed from mechanics of creating task allows different strategies for running task</li>
+                  </ul>
+                  <h1>Signal Handling</h1>
+                  <ul>
+                    <li><code>signals</code> are used in UNIX systems to notify a process that a particular event has occurred</li>
+                    <li><code>signal handler</code> processes signals</li>
+                    <li class="in-dent">signal is generated by an event</li>
+                    <li class="in-dent">signal is delivered to a process</li>
+                    <li class="in-dent">signal is handled by one of two signal handlers: - default or user-defined</li>
+                    <li>every signal has <code>default handler</code> that kernel runs when handling signal</li>
+                    <li class="in-dent"><code>user-defined signal handler</code> can override default</li>
+                    <li class="in-dent">for signle-threaded, signal delivered to process</li>
+                    <li>where should signal be deliverd for multi-threaded?</li>
+                    <li class="in-dent">deliver signal to the thread to which the signal applies</li>
+                    <li class="in-dent">deliver signal to every thead in process</li>
+                    <li class="in-dent">deliver the signal to certain thead in the process</li>
+                    <li class="in-dent">assign a specific thread to receive all signals for the process</li>
+                  </ul>
+                  <h1>Thread cancellation</h1>
+                  <ul>
+                    <li>termination a thread b4 it has finished</li>
+                    <li>thread to be canceled is <code>target thread</code></li>
+                    <li>2 general approcaches:</li>
+                    <li class="in-dent"><code>asynchronous cancellation</code> terminates the target thread immediately</li>
+                    <li class="in-dent"><code>deferred cacellation</code> allows the target thread to periodically check if it should be cancelled</li>
+                    <li>invoking thread cancellation requests cancellation, but actual cancellation depends on thread state</li>
+                    <li>if thread has cacellation disabled, cacellation remainds pending until thread enables it</li>
+                    <li>default type is deffered</li>
+                    <li class="in-dent">cacellation only occurs when thread reaches <code>cacellation point</code></li>
+                    <li>on linux ssystems, thread cancellation is handeld through signals</li>
+                  </ul>
+                  <h1>Thread-local storage</h1>
+                  <ul>
+                    <li><code>thread-local storage(TLS) allows each thread to have its own copy of data</code></li>
+                    <li>useful when you do not have control over thread creation process</li>
+                    <li>different from local variables</li>
+                    <li class="in-dent">local variables cisible only during single functino invocation</li>
+                    <li class="in-dent">TLS visible across function invocations</li>
+                    <li>similar to static data</li>
+                    <li class="in-dent">TLS is unique to each thread</li>
+                  </ul>
+                  <h1>Linux threads</h1>
+                  <ul>
+                    <li>linux refers to them as <code>tasks</code> rather than <code>threads</code></li>
+                    <li>thread creation is done through <code>clone()</code> system call</li>
+                    <li><code>clone()</code> allows a child task to share the address space of parent task</li>
+                    <li>flag control behavior</li>
+                    <li class="in-dent">CLONE_FS: files system info is shared</li>
+                    <li class="in-dent">CLONE_VM: same memory spae is shared</li>
+                    <li class="in-dent">CLONE_SIGHAND: signal handlers shared</li>
+                    <li class="in-dent">CLONE_FILES: set of open files is shared</li>
+                    <li><code>struct task_struct</code> point to process data structures, shared or unique</li>
+                  </ul>
+                </section>
+                <section id="synchonization-chapter">
+                  <h1>Race Condition</h1>
+                  <ul>
+                    <li>incorrect state can arrise due to multi-access to a variable/data by processors concurrently</li>
+                    <li>outcome of the execution depends on the particular order in which data access occurs</li>
+                    <li>we need to ensure that access to data occurs by one process @ a time</li>
+                  </ul>
+                  <h1>Critical section problem</h1>
+                  <ul>
+                    <li>each process has <code>crtical section</code> segment of code: </li>
+                    <li class="in-dent">when one process is executing critical code, no other process may access its own critical section</li>
+                    <li>each prcess must ask permission to enter critical section, and may follow with exit section, then remainder section</li>
+                  </ul>
+                  <h1>solutions to critical-section problem</h1>
+                  <ul>
+                    <li><code>mutual exclusion</code></li>
+                    <li><code>progress: if no process is exectuing its crtical section, and a process requests to execute its critical section, that process will gain priority to run its critical section asap</code></li>
+                    <li><code>bound waiting</code> a bound must exist on the # of times a process(es) is allowed to enter its critical section after another process has made a request to enter critical and before that request is granted  </li>
+                  </ul>
+                  <h1>Critical-Section handling in OS</h1>
+                  <ul>
+                    <li>2 approaches:</li>
+                    <li class="in-dent"> preemptive: allows preemtion of process when running in kernel mode</li>
+                    <li class="in-dent">non-preemptive: runs until exits kernel mode, bocks or voluntarily yields CPU</li>
+                  </ul>
+                  <h1 id="sync-hardware">Synchronization Hardware</h1>
+                  <ul>
+                    <li>many systems provide hardware support for implementing critical code sections</li>
+                    <li>all sulutions below based on idea of <code>locking</code></li>
+                    <li>uniprocessors</li>
+                    <li class="in-dent">could disabe interrupts</li>
+                    <li class="in-dent">currently running code would execute w/o preemption</li>
+                    <li class="in-dent">generally too inefficient on multiprocessor systems</li>
+                    <li>modern machines provide special atomic hardware instructions</li>
+                  </ul>
+                  <h1>solution to critical-section problem using locks</h1>
+                  <pre class="code-box"><code>do {<br>  acquire_lock{};<br>     critical section;<br>     release_lock{};<br>  remainder_section;<br>} while(true);
+                  </code></pre>
+                  <h1>test_and_set Instruction</h1>
+                  <ul>
+                    <li>exectuted atomically</li>
+                    <li>returns original value of passed param</li>
+                    <li>set the new value of passed param to TRUE</li>
+                  </ul>
+                  <pre class="code-box"><code>boolean test_and_set (boolean *target) {<br>   boolean rv - *target;<br>   *target = TRUE;<br>   return rv;<br
+                    >}</code></pre>
+                    <h1>Solution using test()_and_set()</h1>
+                    <ul>
+                      <li>shared boolean variable lock, initialezed to FALSE</li>
+
+                    </ul>
+                    <pre class="code-box"><code>do {<br>  while (test_and_set(&amp;lock));<br>    /* critical section*/<br>  lock = false;<br>    /* Remainder section */<br>} while (true);</code></pre>
+                    <h1>compare_and_swap instruction</h1>
+                    <ul>
+                      <li>executed atomicaaly</li>
+                      <li>returns original value of passed param</li>
+                      <li>set the variable 'value' to the passed param 'new_value' iff 'value == 'expected'</li>
+                    </ul>
+                    <pre class="code-box"><code>int compare _and_swap(int*value, int expected, int new_value) {<br>  int temp = *value;<br>  if(*value == expected) *value = new_value; <br>  return temp;<br>}
+                    </code></pre>
+                    <h1>Bounded-wait mutual exlusion w/ test_and set</h1>
+                    <pre>do { <br>  waiting[i] = TRUE;<br>  key = TRUE;<br>  while (waiting[i] &amp;&amp; key)<br>    key = test_and_set(&amp;clock);<br>  waiting[i] = FALSE;<br>  /* crtical section */<br>  j = (j+1) % n;<br>  while ((j != i) &amp;&amp; !waiting[j])<br>    j = j+1 %n;<br>  if(j==i)<br>    lock = FALSE;<br>  else<br>    waitnig[j] = FALSE;<br>  /* remainder section */<br>} while (TRUE);</pre>
+                    <h1>Solution using compare_and_swap</h1>
+                    <ul>
+                      <li>shared integer lock, initialezed to 0</li>
+                    </ul>
+                    <pre class="code-box"><code>do {<br>  while (compare_and_swap(&amp;lock,0,1) != 0);<br>    /* critical section*/<br>  lock = 0;<br>    /* Remainder section */<br>} while (true);</code></pre>
+                    <h1>MIPS and atomic instructions</h1>
+                    <ul>
+                      <li>problem:</li>
+                        <li class="in-dent">2 processors sharing an area of memory</li>
+                        <li class="in-dent">p writes, then p2 reads</li>
+                        <li class="in-dent">data race if p1 and p2 don't sync; result depedns on order of access</li>
+                      <li>Mips support</li>
+                        <li class="in-dent">atomic pari of instructions</li>
+                      <li>load linked : LL rt, offset(rs)</li>
+                      <li>store conditional: SC rt, offset(rs)</li>
+                      <li>succeds if location no changed since the LL; returns 1 in rt</li>
+                      <li>fails if location is changed: returns 0 in rt</li>
+                    </ul>
+                    <h1>mutex locks</h1>
+                    <ul>
+                      <li>previous solutions are complicated and generally inaccessible to programmer</li>
+                      <li>OS designers build software tools to solve critical section problem</li>
+                      <li>simplest is mutex lock</li>
+                      <li>protect a crtical section by first <code>acquire()</code> a lock then <code>release()</code> the lock</li>
+                      <li>calls to <code>acquire()</code> and <code>release()</code> must be atomic</li>
+                      <li>this solution requires <code>busy waiting</code>; known as <code>spinlock</code></li>
+                    </ul>
+                    <h1><code>acquire()</code> and <code>release()</code></h1>
+                    <div class="container"><img style="max-width: 100%" src="./img/S2.png"></div>
+                    <h1>Semaphore</h1>
+                    <ul>
+                      <li>sync tool that provides more sohpisticated ways (than Mutex Lokcs) for process to sync activities</li>
+                      <li>semaphore S - integer variable</li>
+                      <li>can only be accessed vai 2 indivisible operations</li>
+                        <li class="in-dent"><code>wait()</code> and <code>signal()</code></li>
+                      <li><code>wait()</code> and <code>signal()</code> definitions</li>
+                      <div class="container"><img style="max-width: 100%" src="./img/S3.png"></div>
+                    </ul>
+                    <h1>Semaphore usage</h1>
+                    <ul>
+                      <li><code>counting semaphore</code>: integer value can range over an unrestricted domain</li>
+                      <li><code>binary semaphore</code>: integer value can range only b/w 0 and 1; same as a mutex lock</li>
+                      <li>can solve various sync problems</li>
+                      <li>consider p1 &amp; p2 that require s1 to happen before s2:</li>
+                      <li><pre>p1:<br>  S1;<br>  signal(synch);<br>p2:<br>  wait(synch);<br>  S2;</pre></li>
+                      <li>can implement a counting semaphore S as a binary semaphore</li>
+                    </ul>
+                    <h1>Semaphore implementation</h1>
+                    <ul>
+                      <li>must guarantee that no 2 processes can execute the <code>wait()</code> and <code>signal()</code>on the samesemaphore at the same time</li>
+                      <li>implementation becomes the critical section problem where the wait and signal code are placed in the critical section</li>
+                      <li>applications may spend lots of time in critical thus this is not a good solution</li>
+                    </ul>
+                    <h1>Semaphore implementation with no busy waiting</h1>
+                    <ul>
+                      <li>w/ ea/ semaphore there is an associated waiting queue</li>
+                      <li>e/ entry in wait queue has 2 data items: value (int*) and *next to next record on list</li>
+                      <li>2 operations:</li>
+                        <li class="in-dent"><code>block: place the process invoking the operation on the apropriate wait que</code></li>
+                        <li class="in-dent"><code>wakeup: remove 1 of processes in wait queue and place it in ready queue</code></li>
+                      <pre>typedef struct{<br>  int value;<br>  struct process *list;<br>} semaphore;</pre>
+                      <li>implementation w/ no busy wait</li>
+                      <div class="container"><img style="max-width: 100%" src="./img/S4.png"></div>
+                    </ul>
+                    <h1>Deadlock and Starvation</h1>
+                    <ul>
+                      <li><code>deadlock: two or more processes are waiting indefinitely for an event that can be caused by only one fo the waiting processes</code></li>
+                      <li>let S and Q be two semaphores initialized to 1</li>             
+                      <div class="container"><img style="max-width: 100%" src="./img/S5.png"></div>
+                      <li><code>Starvation:</code> indefinite blocking</li>
+                        <li class="in-dent">a process may never be removed from the semaphore queue in which it is suspended</li>
+                      <li><code>priority inversion:</code> scheduling problem when lower-priority process holds a lock needed by higher-priority process</li>
+                        <li class="in-dent">solved via <code>priority-inheritance protocol</code></li>
+                    </ul>
+                    <h1></h1>
+                  </section>
+                  <!-- CPU SCHEDULING ================================ -->
+                  <section id="Scheduling-chapter">
+                    <h1>CPU Scheduling</h1>
+                    <ul>
+                      <li>Basic concepts</li>
+                      <li>Scheduling criteria</li>
+                      <li></li>
+                    </ul>
+                    <h1>Basic concepts</h1>
+                    <ul>
+                      <li>MAx cpu utlization obtained w/ multiprogramming</li>
+                      <li>cpu-i/o burst cycle - process execution consists of a cule of cpu execution adn i/o wait</li>
+                      <li>cpu burst followed bu i/o burst</li>
+                      <li>cpu burst distibution is main concern</li>
+                    </ul>
+                    <h1>CPU Scheduler</h1>
+                    <ul>
+                      <li></li>
+                      <li class="in-dent"></li>
+                      <li></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li></li>
+                      <li></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                    </ul>
+                    <h1>Dispatcher</h1>
+                    <ul>
+                      <li></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li class="in-dent"></li>
+                      <li><code>Dispatch latency</code> time it takes for the dispatcher to stop one process and start another running</li>
+                    </ul>
+                    <h1>Scheduling Criteria</h1>
+                    <ul>
+                      <li><code></code></li>
+                      <li class="in-dent"></li>
+                      <li><code></code></li>
+                      <li class="in-dent"></li>
+                      <li><code></code></li>
+                      <li class="in-dent"></li>
+                      <li><code></code></li>
+                      <li class="in-dent"></li>
+                      <li><code></code></li>
+                      <li class="in-dent"></li>
+                    </ul>
+                    <h1>Shortest-job-first</h1>
+                  </section>
+                </div>
+              </div>
+            </div>
+            <div style="padding-bottom: 200px"></div>
+          </div>
+          <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+      </div><!-- /.container -->
+
+      <!-- FOOTER =========================================================== -->
+      <footer class="starter-footer navbar-fixed-bottom">
+        <div class="social-media-bar">
+          <div class="col-md-12 col-lg-12 col-xl-12">
+            <a class="col-md-4" href="https://twitter.com">
+              <img class="social-media-icon" src="./img/twitter.png" >
+            </a> 
+            <a class="col-md-4" href="https://facebook.com">
+              <img class="social-media-icon" src="./img/facebook.png" >
+            </a>
+            <a class="col-md-4" href="https://youtube.com">
+              <img class="social-media-icon" src="./img/youtube.png" >
+            </a>
+          </div>
+        </div>
+        <!-- BREADCRUMBS ==================================================== -->
+        <div class="container">
+          <ol class="breadcrumb footer-breadcrumbs">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="notes.html">Notes</a></li>
+            <li><a href="artifice.html">A.I.</a></li>
+          </ol>
+        </div>
+      </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./bootstrap/assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="./bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!-- Menu Toggle Script -->
+    <script>
+      $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+      });
+    </script>
+
+  </body>
+  </html>
