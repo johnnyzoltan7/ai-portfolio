@@ -37,14 +37,14 @@
     <nav class="navbar navbar-fixed-top transout">
       <div class="container">
         <div class="navbar-header">
-          <button type="button nav-but" class="navbar-toggle collapsed transout" data-toggle="collapse"
+          <button type="button nav-but" class="navbar-toggle collapsed" data-toggle="collapse"
             data-target="#navbar" aria-expanded="false" aria-controls="navbar">
             <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
+            <span class="icon-bar" style="background-color: #c61418"></span>
+            <span class="icon-bar" style="background-color: #87f2e4"></span>
+            <span class="icon-bar" style="background-color: #0c74d4"></span>
           </button>
-          <a class="navbar-brand transout" href="index.html"><img id="hal" src="./img/hal/hal0.png" class="hal"></a>
+          <a class="navbar-brand transout" href="index.html"><img id="hal" src="./img/hal/hal0.png" class="hal" onmouseenter="rotateCWHal()" onmouseleave="rotateCCWHal()"></a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav" style="margin-left: 50px;">
@@ -59,9 +59,7 @@
     <!-- Main Navigation =============================================== --> 
     <div class="container">
       <div class="wrapper">
-        <div id="hal-column" class="container hal-bar">
-<!--           <img id="hal" src="./img/hal/hal0.png" class="hal">        
- -->        </div>
+        
       </div>
     </div><!-- /.wrapper--> 
     <!-- Bootstrap core JavaScript

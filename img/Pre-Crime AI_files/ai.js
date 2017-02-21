@@ -1,9 +1,9 @@
 function rotateCWHal() {
 	var elem = document.getElementById("hal");
 	var halNum = 0;
-	var id = setInterval(clockwise,25);
+	var id = setInterval(clockwise,50);
 	function clockwise() {
-		if (halNum == 34) { 
+		if (halNum == 23) { 
 			clearInterval(id);
 		}
 		else {
@@ -15,8 +15,8 @@ function rotateCWHal() {
 
 function rotateCCWHal() {
 	var elem = document.getElementById("hal");
-	var halNum = 55;
-	var id = setInterval(counterClockwise,15);
+	var halNum = 44;
+	var id = setInterval(counterClockwise,40);
 	function counterClockwise() {
 		if (halNum == -1) { 
 			clearInterval(id);
@@ -28,5 +28,5 @@ function rotateCCWHal() {
 	}
 }
 
-// setInterval(rotateCWHal,5000);
-// setInterval(rotateCCWHal,10000);
+setInterval(rotateCWHal,5000);
+setInterval(rotateCCWHal,10000);
