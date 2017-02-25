@@ -27,6 +27,3 @@ function rotateCCWHal() {
 		}
 	}
 }
-
-// setInterval(rotateCWHal,5000);
-// setInterval(rotateCCWHal,10000);

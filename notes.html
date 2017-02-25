@@ -368,8 +368,15 @@
                     <li>modern machines provide special atomic hardware instructions</li>
                   </ul>
                   <h1>solution to critical-section problem using locks</h1>
-                  <pre class="code-box"><code>do {<br>  acquire_lock{};<br>     critical section;<br>     release_lock{};<br>  remainder_section;<br>} while(true);
-                  </code></pre>
+                  <div class="row">
+                    <div class="col-md-9">  
+                      <pre id="code-boxer" ><code>do {<br>  acquire_lock{};<br>     critical section;<br>     release_lock{};<br>  remainder_section;<br>} while(true);
+                      </code></pre>
+                    </div>
+                    <div class="col-md-1">
+                      <a href="#toggle_codeBox" class="btn btn-danger toggle-menu" id="toggle_codeBox"> Hide Code</a>
+                    </div>
+                  </div>
                   <h1>test_and_set Instruction</h1>
                   <ul>
                     <li>exectuted atomically</li>
@@ -529,9 +536,7 @@
             <div style="padding-bottom: 200px"></div>
           </div>
           <!-- /#page-content-wrapper -->
-
-        </div>
-        <!-- /#wrapper -->
+        </div><!-- /#wrapper -->
       </div><!-- /.container -->
 
       <!-- FOOTER =========================================================== -->
@@ -572,6 +577,10 @@
       $("#menu-toggle").click(function(e) {
         e.preventDefault();
         $("#wrapper").toggleClass("toggled");
+      });
+      $("#toggle_codeBox").click(function(e) {
+        e.preventDefault();
+        $("#code-boxer").toggleClass("toggled");
       });
     </script>
 

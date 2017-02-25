@@ -153,6 +153,11 @@
         font-size: 40px
     }
 }
-.code-box {
+#code-boxer {
     max-width: 60%
+}
+
+#code-boxer.toggled {
+    visibility: hidden;
+    max-height: 0px;
 }

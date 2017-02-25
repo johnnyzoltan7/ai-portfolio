@@ -1,10 +1,10 @@
 body {
 	background-color: #000000;
-	background-image: url(../img/bkgrnd.jpg); 
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-attachment: fixed; 
+	background-image: url("../img/precrime.jpg");
 }
 .hal {
 	position: absolute;
@@ -34,30 +34,99 @@ body {
 	border-radius: 30px;
 }
 
-/*orb styles*/
-.orb, .orbR,.orbG,.orbY,.orbO {
-	max-width: 60px;
+.thumbnail-photo {
+	height: 200px;
+	width: 192px;
 }
-.orbR {
-	background-repeat: no-repeat;
-	background-image: url(../img/orbR.png);
-}
-.orbG {
-	background-repeat: no-repeat;
-	background-image: url(../img/orbG.png);
-}
-.orbY {
-	background-repeat: no-repeat;
-	background-image: url(../img/orbY.png);
-}
-.orbO {
-	background-repeat: no-repeat;
-	background-image: url(../img/orbO.png);
-}
-.first-row, .second-row, .third-row {
-	margin-top: 100px
 
+.left-button, .right-button {
+	margin-top: 50%; 
 }
-.orb-pressed {
-	align-content: center;
+.center-button {
+	margin-bottom: 20px;
+}
+.hide-scroller {
+   height:300px;
+   overflow:hidden;
+   margin:15px -300px 15px 15px;
+   padding-right:300px;
+   position: fixed;
+   bottom: 300px
+}
+/*
+* 	WRAPPER & PAGE DEFINITIONS
+*/
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+	padding-bottom: 300px;
+}
+
+#bottomPage {
+	z-index: 1000;
+    position: fixed;
+    bottom: 300px;
+    width: 85%;
+    height: 70px;
+    margin-bottom: -300px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #bottomPage {
+	height: 300px
+}
+
+#leftPage {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #222;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled-left #leftPage {
+	width: 51%;
+}
+#rightPage {
+    z-index: 1000;
+    position: fixed;
+    right: 250px;
+    width: 0;
+    height: 100%;
+    margin-right: -250px;
+    overflow-y: auto;
+    background: #444;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled-right #rightPage {
+	width: 49%;
+}
+#mainPage {
+	width: 85%;
+	position: absolute;
+	padding: 10px;
+}
+#wrapper.toggled #mainPage {
+
 }
